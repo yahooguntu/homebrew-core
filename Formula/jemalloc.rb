@@ -13,7 +13,7 @@ class Jemalloc < Formula
   end
 
   def install
-    system "./configure", "--disable-debug", "--prefix=#{prefix}", "--with-jemalloc-prefix="
+    system "./configure", "--disable-debug", "--enable-prof", "--prefix=#{prefix}", "--with-jemalloc-prefix="
     system "make"
     system "make", "check"
     system "make", "install"
